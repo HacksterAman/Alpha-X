@@ -29,7 +29,7 @@ unsigned long RestartcurrentMillis = 0;
 const float threshold = 0.01; // Precision threshold for floating-point comparison
 
 const char filename[] = "/AX306_SD.csv";
-const String title = "Boot Event AlphaX3, For any queries www.reflowtech.in/ hello@reflowtech.in\n";
+const String title = "Boot Event\n";
 
 const int totalChannels = 6;
 float volts[totalChannels + 1];

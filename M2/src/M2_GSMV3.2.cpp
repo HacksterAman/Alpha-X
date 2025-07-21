@@ -25,10 +25,10 @@ TinyGsm modem(SerialAT);
 TinyGsmClient client(modem);
 PubSubClient mqtt(client);
 
-const char *mqttServer = "mqtt.reflowtech.cloud";
+const char *mqttServer = "MQTT_SERVER_URL";
 const int mqttPort = 1883;
-const char *mqttUser = "mqttreflowtech";
-const char *mqttPassword = "mastertransfer#321@66#mqtt";
+const char *mqttUser = "USERNAME";
+const char *mqttPassword = "PASSWORD";
 
 #define MQTT_TOPIC_INPUT "AX3/01/INPUT"
 #define MQTT_TOPIC_OUTPUT "AX3/01/OUTPUT"
@@ -75,8 +75,6 @@ void setup()
   digitalWrite(powerPin, LOW);
   delay(200);
 
-  Serial.println("\nConfiguring REFLOW_ALPHA_X SERIES. Kindly wait");
-  delay(10000);
   SerialAT.begin(115200, SERIAL_8N1, RXD2, TXD2);
 
   Serial.println("Waiting for network...");
